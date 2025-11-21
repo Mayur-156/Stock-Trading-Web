@@ -1,0 +1,248 @@
+/* === Professional Buy Window (for your current JS) === */
+
+/* background blur overlay */
+.buy-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 20, 0.55);
+  backdrop-filter: blur(6px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* popup container */
+#buy-window {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 420px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+/* heading */
+#buy-window h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* input section */
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+fieldset {
+  flex: 1;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f8fafc;
+  transition: 0.2s;
+}
+
+fieldset:hover {
+  background: #f1f5f9;
+  border-color: #005ecb;
+}
+
+legend {
+  color: #007bff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0 6px;
+}
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 0;
+  color: #111;
+}
+
+/* bottom section */
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.buttons span {
+  font-size: 0.9rem;
+  color: #555;
+  font-weight: 500;
+}
+
+/* button styling */
+.btn {
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-blue {
+  background: #007bff;
+  color: white;
+}
+
+.btn-blue:hover {
+  background: #005ecb;
+  transform: scale(1.05);
+}
+
+.btn-grey {
+  background: #e2e8f0;
+  color: #333;
+}
+
+.btn-grey:hover {
+  background: #cbd5e1;
+  transform: scale(1.05);
+}
+
+/* subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* responsive look */
+@media (max-width: 480px) {
+  #buy-window {
+    width: 90%;
+    padding: 20px;
+  }
+}
+
+/* src/BuyActionWindow.css */
+.buy-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 10, 20, 0.55);
+  backdrop-filter: blur(6px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+#buy-window {
+  background: #ffffff;
+  border-radius: 16px;
+  width: 420px;
+  padding: 24px 28px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+  animation: slideUp 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+#buy-window h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+}
+
+fieldset {
+  flex: 1;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+  padding: 10px;
+  background: #f8fafc;
+  transition: 0.2s;
+}
+fieldset:hover { background: #f1f5f9; border-color: #005ecb; }
+
+legend { color: #007bff; font-size: 0.85rem; font-weight: 500; padding: 0 6px; }
+
+input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 0;
+  color: #111;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-top: 12px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.buttons span { font-size: 0.9rem; color: #555; font-weight: 500; }
+
+.btn { padding: 10px 22px; border-radius: 8px; border: none; cursor: pointer; font-size: 0.95rem; font-weight: 600; transition: all 0.2s ease; }
+.btn-blue { background: #007bff; color: white; }
+.btn-blue:hover { background: #005ecb; transform: scale(1.05); }
+.btn-grey { background: #e2e8f0; color: #333; }
+.btn-grey:hover { background: #cbd5e1; transform: scale(1.05); }
+
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (max-width: 480px) {
+  #buy-window { width: 90%; padding: 20px; }
+}
+
